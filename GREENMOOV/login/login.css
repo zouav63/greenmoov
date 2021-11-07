@@ -1,0 +1,133 @@
+body{
+    background-color: #90EE90;
+}
+.element{
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;    
+    position: absolute;
+    background-color: #fff;
+    text-align: center;
+    height: 45vh;
+    min-width: 400px;
+    min-height: 400px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "log reg"
+    "x x";
+}
+#login{
+    grid-area: x;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 100px 70px;
+    grid-template-areas: 
+    "input input"
+    "Lbutton Lbutton"
+    "forgot forgot";
+}
+#register{
+    grid-area: x;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "prenom nom"
+    "email phone"
+    "password Cpassword"
+    "Rbutton Rbutton";
+    align-items: center;
+    justify-items: center;
+    grid-gap:1rem;
+}
+
+#prenom{
+    grid-area:prenom
+}
+#nom{
+    grid-area:nom
+}
+#email{
+    grid-area:email
+}
+#phone{
+    grid-area:phone
+}
+#password{
+    grid-area:password
+}
+#Cpassword{
+    grid-area:Cpassword
+}
+#log{
+    grid-area: log;
+}
+#reg{
+    grid-area: reg;
+}
+#input{
+    grid-area: input;
+}
+#Lbutton{
+    grid-area: Lbutton;
+}
+#Rbutton{
+    width: 70%;
+    grid-area: Rbutton;
+}
+#forgot{
+    text-align: center;
+    grid-area: forgot;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid black;
+}
+#forgot a{
+    color: rgb(94, 172, 94);
+    text-transform: none;
+}
+button{
+    padding: 1rem;
+    background-color: rgb(128, 231, 128);
+    border: 1px solid rgb(128, 231, 128);
+    box-shadow: 0 2px 5px 0 rgba(31, 177, 31, 0.349);
+    border-radius: 10px;
+    width: 70%;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 120%;
+}
+.active{
+    color: rgb(31, 177, 31);
+    border-bottom: 2px solid rgb(31, 177, 31);
+}
+.inactive{
+    color: rgba(10, 49, 10, 0.247);
+}
+#login input{
+    text-align: center;
+    height: 40px;
+    width: 80%;
+}
+#register input{
+    text-align: center;
+    height: 40px;
+    width: 100%;
+}

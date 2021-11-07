@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+nav{
+    border-bottom: solid rgba(0, 0, 0, 0.288) 1px;
+    box-shadow: 0 3px 4px -1px rgba(0, 0, 0, 0.288);
+    padding:50px 30px;
+}
+body{
+    background-color: #fff;
+    overflow-x: hidden;
+}
+.sticky{
+    color: #40a06d;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+}
+#logo{
+    position: absolute;
+    top: -.5px;
+    height: 80px;
+    width: 160px;
+}
+h1{
+    text-transform: uppercase;
+}
+.menu{
+    margin-top: -20px;
+}
+.m-left{
+    float:left;
+}
+.m-right{
+    float:right;
+}
+
+.m-login:hover{
+    background-color: #4cb67d;
+    border: 1px #4cb67d solid;
+    box-shadow: 0 1px 3px .5px rgba(0, 0, 0, 0.288);
+}
+.m-a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: larger;
+    text-transform: uppercase;
+    color: #327e55;
+    padding: 10px;
+    margin-right: 2vw;
+}
+.m-login{
+    margin-left:1vw;
+    border: 1px #40a06d solid;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #40a06d;
+    color: #fff;
+}
+#profile{
+    margin: 0;
+}
+.m-a:hover{
+    border-bottom: 2px #40a06d solid;
+    border-radius: none;
+}
+.m-nav-toggle{
+    position: relative;
+    width: 40px;
+    height: 25px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+span.m-toggle-icon, span.m-toggle-icon:before, span.m-toggle-icon:after{
+    transition: 0.3s;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #378b5e;
+    position: relative;
+}
+span.m-toggle-icon:before{top: 12px;}
+span.m-toggle-icon:after{top: -14px;}
+
+.is-log{
+    visibility: hidden;
+}
+.m-right.is-open{
+    transform : translateX(0);
+}
+
+.m-nav-toggle.is-open span.m-toggle-icon{
+    background: transparent;
+}
+
+.m-nav-toggle.is-open span.m-toggle-icon:before, .m-nav-toggle.is-open span.m-toggle-icon:after{
+    transition: 0.3s;
+    transform-origin: center;
+    transform: rotate(45deg) translateY(2px) translateX(2px);
+    top: 0;
+}
+.m-nav-toggle.is-open span.m-toggle-icon:after{
+    transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 880px) {
+    .m-right{
+        position:absolute;
+        top:80px; right:0;
+        width:200px;
+        height:100%;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out; 
+    }
+    #profile{
+        margin: 2vw;
+    }
+    .m-a{
+        border-radius: 15px;
+        background-color: white;
+        margin-top: 10px;
+        margin-left: 5px;
+        display: block;
+    }
+    .m-login{
+        background-color: #40a06d;
+        text-align: center;
+        margin: 15px 25px 0px 20px;
+    }
+    .m-nav-toggle{
+        cursor: pointer;
+        display: flex;
+    }
+} 

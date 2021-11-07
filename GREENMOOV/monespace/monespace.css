@@ -1,0 +1,98 @@
+
+.contain{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem 2rem;
+}
+#mesinfos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "title title title" "label infos edit";
+}
+#mescommandes{
+    display: flex;
+    max-height: 20vh;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 1rem 2rem;
+}
+#commandeadmin{
+    margin: 1rem 0;
+}
+#gerercommande{
+    margin: 2rem;
+    text-align: center;
+}
+.btn{
+    max-width: 300px;
+    max-height: 100px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border: 1px solid #327e55;
+    color: rgb(32, 97, 60);
+    background-color: #327e5515;
+    box-shadow: 0px 0px 3px #327e55;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 110%;
+}
+.btn:hover{
+    background-color: #327e5537;
+}
+.styled-table {
+    width: 100vw;
+    overflow-x: scroll;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table th,.styled-table td {
+    padding: 12px 15px;
+}
+
+#title{
+    grid-area: title;
+}
+.align p{
+    grid-area: label;
+}
+.align div{
+    grid-area: infos;
+}
+.align a{
+    grid-area: title;
+}
+ul{
+    margin: 1rem 2rem;
+}
+.edit{
+    text-align: center;
+    text-decoration: none;
+    color: #327e55;
+    cursor:pointer;
+}
+.in-line{
+    display: flex;
+    flex-direction: row;
+}
